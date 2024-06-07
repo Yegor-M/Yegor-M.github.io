@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F8F9D7;
+    color: #850F8D;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#content {
+    flex: 1;
+    /**display: flex;**/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.tab-content {
+    display: none;
+}
+
+#main-page {
+    text-align: center;
+}
+
+#counter {
+    font-size: 7rem;
+    font-weight: bold;
+    margin-top: 5%;
+    color: #fdff79;
+    transition: transform 3s, opacity 3s;
+}
+
+.animate-counter {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+#main-button {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    background-color: #850F8D;
+    color: #fdff79;
+    border: none;
+    font-size: 3rem;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+#main-button:active {
+    transform: translate(-50%, -50%) scale(0.95);
+    box-shadow: 0 2rem #fdff79;
+}
+
+footer {
+    background-color: #E49BFF;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+}
+
+.tab-button {
+    background: none;
+    border: 1rem brown;
+    font-size: 1.5rem;
+    color: #850F8D;
+    cursor: pointer;
+
+}
+
+.background {
+    background-image: url('../img/loot.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}

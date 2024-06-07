@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <title>Test Telegram WebApps API</title>
+   <script src="https://telegram.org/js/telegram-web-app.js"></script> <!-- Подключаем скрипт от телеграм -->
+   <link rel="stylesheet" href="./css/styles.css">
+   <style>
+      /* body {
+         color: var(--tg-theme-text-color);
+         background: var(--tg-theme-bg-color);
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         font-size: 18px;
+      }
+
+      .hint {
+         color: var(--tg-theme-hint-color);
+      }
+
+      .link {
+         color: var(--tg-theme-link-color);
+      }
+
+      .button {
+         background: var(--tg-theme-button-color);
+         color: var(--tg-theme-button-text-color);
+         border: none;
+         font-size: 18px;
+      }
+
+      .button:not(:last-child) {
+         margin-bottom: 20px;
+      }
+
+      #usercard {
+         text-align: center;
+      } */
+   </style>
+</head>
+<body>
+   <div id="content" class="background">
+      <div id="main-page">
+          <div id="counter">0</div>
+          <button id="main-button">Loot</button>
+      </div>
+      <div id="tab1" class="tab-content">Эти ваши игры сука подзалупные</div>
+      <div id="tab2" class="tab-content">Профиль твой собака ты сутулая <3</div>
+  </div>
+
+  <footer>
+      <button class="tab-button" data-tab="main-page">Click</button>
+      <button class="tab-button" data-tab="tab1">Games</button>
+      <button class="tab-button" data-tab="tab2">Profile</button>
+  </footer>
+
+   <!-- <div id="usercard">
+   </div> -->
+</body>
+<script src="./js/main.js"></script>
+
+<!-- <script>
+   let tg = window.Telegram.WebApp; // получаем объект webapp телеграма 
+
+   tg.expand(); // расширяем на все окно  
+
+   tg.MainButton.text = "Changed Text"; // изменяем текст кнопки 
+   tg.MainButton.setText("Changed Text1"); // изменяем текст кнопки иначе
+   tg.MainButton.textColor = "#F55353"; // изменяем цвет текста кнопки
+   tg.MainButton.color = "#143F6B"; // изменяем цвет бэкграунда кнопки
+   tg.MainButton.setParams({"color": "#143F6B"}); // так изменяются все параметры
+
+   let btn = document.getElementById("btn"); // получаем кнопку скрыть/показать 
+
+   btn.addEventListener('click', function() { // вешаем событие на нажатие html-кнопки
+      if (tg.MainButton.isVisible) { // если кнопка показана 
+         tg.MainButton.hide(); // скрываем кнопку 
+      } else { // иначе
+         tg.MainButton.show(); // показываем 
+      }
+   });
+
+   let btnED = document.getElementById("btnED"); // получаем кнопку активировать/деактивировать
+   btnED.addEventListener('click', function() { // вешаем событие на нажатие html-кнопки
+      if (tg.MainButton.isActive) { // если кнопка показана 
+         tg.MainButton.setParams({"color": "#E0FFFF"}); // меняем цвет
+         tg.MainButton.disable(); // скрываем кнопку 
+      } else { // иначе
+         tg.MainButton.setParams({"color": "#143F6B"}); // меняем цвет
+         tg.MainButton.enable(); // показываем 
+      }
+   });
+
+   Telegram.WebApp.onEvent('mainButtonClicked', function() {
+      tg.sendData("some string that we need to send"); 
+      // при клике на основную кнопку отправляем данные в строковом виде
+   });
+
+   let usercard = document.getElementById("usercard"); // получаем блок usercard 
+
+   console.log("tg.initDataUnsafe:", tg.initDataUnsafe);
+   // Проверка наличия данных пользователя
+   if (tg.initDataUnsafe && tg.initDataUnsafe.user) {
+      console.log("User data:", tg.initDataUnsafe.user); // Логируем данные пользователя
+      let user = tg.initDataUnsafe.user;
+
+      let profName = document.createElement('p'); // создаем параграф
+      profName.innerText = `${user.first_name} ${user.last_name} ${user.username} (${user.language_code})`;
+      // выводим имя, фамилию, через тире username и код языка
+      usercard.appendChild(profName); // добавляем 
+
+      let userid = document.createElement('p'); // создаем еще параграф 
+      userid.innerText = `${user.id}`; // показываем user_id
+      usercard.appendChild(userid); // добавляем
+   } else {
+      console.error("User data not available");
+   }
+
+   // работает только в attachment menu
+   // let pic = document.createElement('img'); // создаем img
+   // pic.src = tg.initDataUnsafe.user.photo_url; // задаём src 
+   // usercard.appendChild(pic); // добавляем элемент в карточку 
+</script> -->
+</html>
